@@ -19,6 +19,14 @@ $(function(){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
+    $.each(['#f00', '#ff0', '#0f0', '#0ff', '#00f', '#f0f', '#000', '#fff'], function() {
+                $('#colors_demo .tools').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
+              });
+              $.each([3, 5, 10, 15], function() {
+                $('#colors_demo .tools').append("<a href='#colors_sketch' data-size='" + this + "' style='background: #ccc'>" + this + "</a> ");
+              });
+              $('#colors_sketch').sketch();
+
     $('#myCanvas').sketch({ defaultColor: "red" });
 
     $('#download').click(function() {
@@ -38,6 +46,8 @@ $(function(){
 <body>
     <h4>Drag to sketch on the map.</h4>
     <button id=download>Download</button>
+    <div class='tools'>
+            <a href='bk' data-download='png' style='float: right; width: 100px;'>Download</a>
     <div id='wrapper'>
         <img crossOrigin='anonymous' id=bk src='http://i.imgur.com/qqmMND3.jpg'>
         <canvas id="myCanvas" width=800 height=800></canvas>
