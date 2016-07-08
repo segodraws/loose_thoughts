@@ -4,7 +4,14 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://rawgit.com/intridea/sketch.js/gh-pages/lib/sketch.js"></script>    
 <style>
-    body{ background-color: ivory; }
+#page-wrap {
+  text-align: left;
+  width: 800px;
+  margin: 0 auto;
+}
+    body{
+    text-align: center;
+    background-color: ivory; }
     #wrapper{positon:relative;}
     #bk,#myCanvas{ text-align: center; position:absolute;}
 </style>
@@ -31,7 +38,7 @@ $(function(){
 </script>
 </head>
 <body>
-    <div align="center">
+    <div id="page-wrap">
     <h4>Drag to sketch on the map.</h4>
     <button id=download>Download</button>
     <div id='wrapper'>
