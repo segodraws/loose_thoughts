@@ -5,7 +5,7 @@
 <style>
 #page-wrap {
   text-align: left;
-  width: 800px;
+  width: 1000px;
   margin: 0 auto;
 }
     body{
@@ -24,7 +24,7 @@ $(function(){
           ctx.globalCompositeOperation='destination-over';
           ctx.drawImage(bk, 0, 0);
           ctx.globalCompositeOperation='source-over';
-          var html="<p>Right-click on image below and Save-Picture-As</p>";
+          var html="<p>Press and hold to save. Be sure to Tag Masego on Twitter @UncleSego</p>";
           html+="<img src='"+c.toDataURL()+"' alt='from canvas'/>";
           var tab=window.open();
           tab.document.write(html);
