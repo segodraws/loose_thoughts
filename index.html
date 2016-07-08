@@ -1,41 +1,44 @@
-<!doctype html>
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://rawgit.com/intridea/sketch.js/gh-pages/lib/sketch.js"></script>    
 <style>
-    body{ background-color: ivory; }
+#page-wrap {
+  text-align: left;
+  width: 800px;
+  margin: 0 auto;
+}
+    body{
+    text-align: center;
+    background-color: black; }
     #wrapper{positon:relative;}
-    #bk,#myCanvas{position:absolute;}
+    #bk,#myCanvas{ text-align: center; position:absolute;}
 </style>
 <script>
 $(function(){
-
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-
-    $('#myCanvas').sketch({ defaultColor: "red" });
-
+    $('#myCanvas').sketch({ defaultColor: "white" });
     $('#download').click(function() {
           var img=document.getElementById('bk');
           ctx.globalCompositeOperation='destination-over';
           ctx.drawImage(bk, 0, 0);
           ctx.globalCompositeOperation='source-over';
           var html="<p>Right-click on image below and Save-Picture-As</p>";
-          html+="<img src='"+c.toDataURL()+"' alt='from canvas'/>";
+          html+="<img src='http://i.imgur.com/lqnRp2t.jpg"+c.toDataURL()+"' alt='from canvas'/>";
           var tab=window.open();
           tab.document.write(html);
     });
-
 }); // end $(function(){});
 </script>
+<img src="http://i.imgur.com/WwQVIyR.png" height="300px" width="300px"/>
 </head>
 <body>
+    <div id="page-wrap">
     <h4>Drag to sketch on the map.</h4>
     <button id=download>Download</button>
     <div id='wrapper'>
-        <img crossOrigin='anonymous' id=bk src='https://dl.dropboxusercontent.com/u/139992952/multple/googlemap1.png'>
-        <canvas id="myCanvas" width=459 height=459></canvas>
+        <img crossOrigin='anonymous' id=bk width='800px;' height='800px' style='background: url(http://i.imgur.com/lqnRp2t.jpg) no-repeat center center;'></canvas>>
+        <canvas id="myCanvas"  width='800px' height='800px' style='background: url(http://i.imgur.com/lqnRp2t.jpg) no-repeat center center;'></canvas>
     </div>
 </body>
-</html>
