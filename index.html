@@ -4,7 +4,7 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://rawgit.com/intridea/sketch.js/gh-pages/lib/sketch.js"></script>    
 <style>
-    body{ background-color: ivory; }
+    body{ background-color: black; }
     #wrapper{positon:relative;}
     #bk,#myCanvas{position:absolute;}
 </style>
@@ -14,7 +14,7 @@ $(function(){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
-    $('#myCanvas').sketch({ defaultColor: "red" });
+    $('#myCanvas').sketch({ defaultColor: "white" });
 
     $('#download').click(function() {
           var img=document.getElementById('bk');
@@ -35,7 +35,7 @@ $(function(){
     <h4>Drag to sketch on the map.</h4>
     <button id=download>Download</button>
     <div id='wrapper'>
-        <img crossOrigin='anonymous' id=bk src='https://dl.dropboxusercontent.com/u/139992952/multple/googlemap1.png'>
+        <img crossOrigin='anonymous' id=bk src='http://i.imgur.com/lqnRp2t.jpg'>
         <canvas id="myCanvas" width=459 height=459></canvas>
     </div>
 </body>
