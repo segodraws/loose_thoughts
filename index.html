@@ -25,7 +25,7 @@ $(function(){
           ctx.drawImage(bk, 0, 0);
           ctx.globalCompositeOperation='source-over';
           var html="<p>Right-click on image below and Save-Picture-As</p>";
-          html+="<img src='http://i.imgur.com/lqnRp2t.jpg"+c.toDataURL()+"' alt='from canvas'/>";
+          html+="<img src='"+c.toDataURL()+"' alt='http://i.imgur.com/lqnRp2t.jpg'/>";
           var tab=window.open();
           tab.document.write(html);
     });
