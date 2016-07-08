@@ -1,4 +1,3 @@
-!doctype html>
 <html>
 <head>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -11,7 +10,7 @@
 }
     body{
     text-align: center;
-    background-color: ivory; }
+    background-color: black; }
     #wrapper{positon:relative;}
     #bk,#myCanvas{ text-align: center; position:absolute;}
 </style>
@@ -21,7 +20,7 @@ $(function(){
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
 
-    $('#myCanvas').sketch({ defaultColor: "red" });
+    $('#myCanvas').sketch({ defaultColor: "white" });
 
     $('#download').click(function() {
           var img=document.getElementById('bk');
@@ -36,6 +35,7 @@ $(function(){
 
 }); // end $(function(){});
 </script>
+<img src="http://i.imgur.com/WwQVIyR.png" height="300px" width="300px"/>
 </head>
 <body>
     <div id="page-wrap">
