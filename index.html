@@ -31,9 +31,9 @@ function make_base()
     
     $('#myCanvas').sketch({ defaultColor: "white" });
     $('#download').click(function() {
-          var img=document.getElementById('bk');
+          var img=document.getElementById('base_image');
           ctx.globalCompositeOperation='destination-over';
-          ctx.drawImage(bk, 0, 0);
+          ctx.drawImage(base_image, 0, 0);
           ctx.globalCompositeOperation='source-over';
           var html="<p>Press and hold to save. Be sure to Tag Masego on Twitter @UncleSego</p>";
           html+="<img src='"+c.toDataURL()+"' alt='from canvas'/>";
