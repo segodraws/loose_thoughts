@@ -4,18 +4,9 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://rawgit.com/intridea/sketch.js/gh-pages/lib/sketch.js"></script>    
 <style>
-    body{width: 800px;
-     margin: 0 auto; background-color: black; }
-    h4{margin: 0 auto;color:white; }
-    #wrapper{width: 841px;
-margin: 0 auto;
-positon:relative;}
-
-      .tools { margin-bottom: 10px; }
-      .tools a {
-        border: 1px solid black; height: 30px; line-height: 30px; padding: 0 10px; vertical-align: middle; text-align: center; text-decoration: none; display: inline-block; color: black; font-weight: bold;}
-    #bk,#myCanvas{width: 100%;
-     margin: 0 auto; position:absolute;}
+    body{ background-color: ivory; }
+    #wrapper{positon:relative;}
+    #bk,#myCanvas{position:absolute;}
 </style>
 <script>
 $(function(){
@@ -30,7 +21,7 @@ $(function(){
           ctx.globalCompositeOperation='destination-over';
           ctx.drawImage(bk, 0, 0);
           ctx.globalCompositeOperation='source-over';
-          var html="<p></p>";
+          var html="<p>Right-click on image below and Save-Picture-As</p>";
           html+="<img src='"+c.toDataURL()+"' alt='from canvas'/>";
           var tab=window.open();
           tab.document.write(html);
@@ -42,25 +33,9 @@ $(function(){
 <body>
     <h4>Drag to sketch on the map.</h4>
     <button id=download>Download</button>
-            <div class='demo' id='colors_demo'>
-          <div class='tools'>
-            <a href='#colors_sketch' data-download='png' style='float: right; width: 100px;'>Download</a>
-          </div>
-          <canvas id='colors_sketch' width='800' height='300'></canvas>
-          <script type='text/javascript'>
-            $(function() {
-              $.each(['#f00', '#ff0', '#0f0', '#0ff', '#00f', '#f0f', '#000', '#fff'], function() {
-                $('#colors_demo .tools').append("<a href='#colors_sketch' data-color='" + this + "' style='width: 10px; background: " + this + ";'></a> ");
-              });
-              $.each([3, 5, 10, 15], function() {
-                $('#colors_demo .tools').append("<a href='#colors_sketch' data-size='" + this + "' style='background: #ccc'>" + this + "</a> ");
-              });
-              $('#colors_sketch').sketch();
-            });
-          </script>
     <div id='wrapper'>
-        <img crossOrigin='anonymous' id=bk src='http://i.imgur.com/qqmMND3.jpg'>
-        <canvas id="myCanvas" width=800 height=800></canvas>
+        <img crossOrigin='anonymous' id=bk src='https://dl.dropboxusercontent.com/u/139992952/multple/googlemap1.png'>
+        <canvas id="myCanvas" width=459 height=459></canvas>
     </div>
 </body>
 </html>
