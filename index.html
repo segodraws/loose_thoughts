@@ -25,8 +25,8 @@ $(function(){
           ctx.drawImage(bk, 0, 0);
           ctx.globalCompositeOperation='source-over';
           var html="<p>Right-click on image below and Save-Picture-As</p>";
-          html+="<img src='"+c.toDataURL()+"' alt='http://i.imgur.com/lqnRp2t.jpg'/>";
-          var tab=window.open(http://i.imgur.com/lqnRp2t.jpg);
+          html+="<img src='"+c.toDataURL()+"' alt='from canvas'/>";
+          var tab=window.open();
           tab.document.write(html);
     });
 }); // end $(function(){});
@@ -38,7 +38,7 @@ $(function(){
     <h4>Drag to sketch on the map.</h4>
     <button id=download>Download</button>
     <div id='wrapper'>
-        <img crossOrigin='anonymous' id=bk width='800px;' height='800px' style='background: url(http://i.imgur.com/lqnRp2t.jpg) no-repeat center center;'></canvas>>
-        <canvas id="myCanvas"  width='800px' height='800px' style='background: url(http://i.imgur.com/lqnRp2t.jpg) no-repeat center center;'></canvas>
+       <img crossOrigin='anonymous' id=bk src='http://i.imgur.com/lqnRp2t.jpg'>
+        <canvas id="myCanvas" width=800 height=800></canvas>
     </div>
 </body>
